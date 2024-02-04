@@ -1,6 +1,6 @@
-I used the Create React App to make this. I spent around 10 hours, the limit I gave myself was 9 hours. I wanted to include stuff like a button on signup to go back to login and cleaning up the CSS but ran out of time.
+I used the Create React App to make this. I spent around 10 hours, that was the limit I gave myself. I wanted to include stuff like a button on signup to go back to login and cleaning up the CSS but ran out of time. I ran a npm test to make sure it was working and also tested signing in and loging in. I did have one issue with it showing my profile info from logging in but ran out of time.
 
-This was a reall cool project to work on (had to brush up on my react skills), thank you for this opportunity.
+This was a reall cool project to work on (had to brush up on my react skills which as fun), thank you for this opportunity!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
