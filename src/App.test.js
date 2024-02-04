@@ -6,7 +6,6 @@ test('renders learn react link', async () => {
   
   // Wait for the component to finish rendering
   await waitFor(() => {
-    // Query the link element
     const learnReactLink = screen.queryByRole('link', { name: /learn react/i });
     
     // Check if the link element exists
