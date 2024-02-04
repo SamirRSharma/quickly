@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';  // UseNavigate in order to send to signup, useHistory broken for some reason
 import axios from 'axios';
 
 function Login() {
@@ -10,14 +10,14 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://api-dev.quicklyinc.com/auth/login', {
+      const response = await axios.post('https://api-dev.quicklyinc.com/auth/login', { // inks to API
         email,
         password
       });
       localStorage.setItem('token', response.data.jwtToken);
       navigate('/profile'); 
     } catch (error) {
-      console.error('Error during login:', error);
+      console.error('Error during login:', error); // tells the they have error
       setError('Invalid email or password');
     }
   };
@@ -35,9 +35,9 @@ function Login() {
         <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} />
       </div>
       <button className="btn btn-primary" onClick={handleLogin}>Login</button>
-      <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+      <p>Don't have an account? <Link to="/signup">Sign up</Link></p> 
     </div>
-  );
+  ); // added hyperlink to signup
 }
 
 export default Login;
