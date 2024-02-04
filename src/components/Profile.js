@@ -8,7 +8,7 @@ function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('token'); // Get token from local storage
         if (!token) {
           window.location.href = '/login';
           return;
@@ -21,10 +21,10 @@ function Profile() {
         });
         setUser(response.data);
       } catch (error) {
-        if (error.response && error.response.status === 401) {
+        if (error.response && error.response.status === 401) { // tells them they are not logged in
           setError('Error 401. Unauthorized: Please log in to view this page.');
         } else {
-          setError('Error fetching profile. Please try logging in.');
+          setError('Error fetching profile. Please try logging in.'); // just incase another error pops up
           console.error('Error fetching profile:', error);
         }
       }
@@ -41,7 +41,7 @@ function Profile() {
         <div className="card">
           <div className="card-body">
             <p className="card-text">Name: {user.name}</p>
-            <p className="card-text">Email: {user.email}</p>
+            <p className="card-text">Email: {user.email}</p> // shows their info
           </div>
         </div>
       )}
