@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Signup() {
+function Signup() { // all the stuff mentioned in the task
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,11 +16,11 @@ function Signup() {
   const [businessNumber, setBusinessNumber] = useState('');
   const [hasTradeName, setHasTradeName] = useState(false); // Default false
   const [legalName, setLegalName] = useState('');
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); 
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('https://api-dev.quicklyinc.com/auth/signup', {
+      const response = await axios.post('https://api-dev.quicklyinc.com/auth/signup', { // links to API
         user: {
           first_name: firstName,
           last_name: lastName,
@@ -45,11 +45,11 @@ function Signup() {
         }
       });
       
-      localStorage.setItem('token', response.data.jwtToken);
+      localStorage.setItem('token', response.data.jwtToken); 
       window.location.reload(); 
     } catch (error) {
       console.error('Error during signup:', error);
-      setError('An error occurred during signup.');
+      setError('An error occurred during signup.'); // so they know signup failed
     }
   };
 
@@ -120,8 +120,8 @@ function Signup() {
 <input type="text" className="form-control" value={legalName} onChange={e => setLegalName(e.target.value)} />
 </div>
 <button className="btn btn-primary" onClick={handleSignup}>Signup</button>
-</div>
+</div> 
 );
 }
-
+// alllll of the form areas
 export default Signup;
