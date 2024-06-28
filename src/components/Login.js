@@ -10,7 +10,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://api-dev.quicklyinc.com/auth/login', { // inks to API
+      const response = await axios.post('REMOVED', { // inks to API
         email,
         password
       });
