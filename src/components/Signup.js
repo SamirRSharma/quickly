@@ -20,7 +20,7 @@ function Signup() { // all the stuff mentioned in the task
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('https://api-dev.quicklyinc.com/auth/signup', { // links to API
+      const response = await axios.post('RMOVED', { // links to API
         user: {
           first_name: firstName,
           last_name: lastName,
