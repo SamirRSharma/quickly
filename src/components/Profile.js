@@ -14,7 +14,7 @@ function Profile() {
           return;
         }
         
-        const response = await axios.get('https://api-dev.quicklyinc.com/auth/user', {
+        const response = await axios.get('REMOVED', {
           headers: {
             Authorization: `Bearer ${token}`
           }
